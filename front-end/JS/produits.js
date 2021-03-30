@@ -26,24 +26,29 @@ fetch("http://localhost:3000/api/teddies").then((response) => {
         
         const SelectedItem = `
         <figure class="figure-product">
-            <img src="${idSelectedProduct.imageUrl}" alt="image du petit ourson ${idSelectedProduct.name}" />
-        <figcaption class="caption-product">
-            <p>Nom : ${idSelectedProduct.name}</p>
-            <p>Prix : ${idSelectedProduct.price/ 100} euros</p>
-            <p>Description de ${idSelectedProduct.name} : ${idSelectedProduct.description}</p>
-            <label for="color"></label>
-                <select id="color" class="list">
-                    <option selected hidden>Couleur</option>
-                    <option value="volvo">Tan (défaut)</option>
-                    <option value="saab">Chocolate</option>
-                    <option value="opel">Black</option>
-                    <option value="audi">White</option>
-                </select>
-            <button id="plusButton" class="btn">+</button><span id="qantityContainer"></span><button id="minusButton" class="btn">-</button>
-            <button id="addToCart" class="btn">Ajouter au panier</button>
-        </figcaption>
+                <img src="${idSelectedProduct.imageUrl}" alt="image du petit ourson ${idSelectedProduct.name}" />
+            <figcaption class="caption-product">
+                <p>Nom : ${idSelectedProduct.name}</p>
+                <p>Prix : ${idSelectedProduct.price/ 100} euros</p>
+                <p>Description de ${idSelectedProduct.name} : ${idSelectedProduct.description}</p>
+                <label for="color"></label>
+                    <select id="color" class="list">
+                        <option selected hidden>Couleur</option>
+                        <option value="volvo">Tan (défaut)</option>
+                        <option value="saab">Chocolate</option>
+                        <option value="opel">Black</option>
+                        <option value="audi">White</option>
+                    </select>
+                <button id="plusButton" class="btn">+</button><span id="qantityContainer"></span><button id="minusButton" class="btn">-</button>
+                <br>
+                <button id="addToCart" class="btn">Ajouter au panier</button>
+            </figcaption>
         </figure>
         `;
+
+        let modifTitleProduct = document.querySelector('#DocumentTitle');
+        console.log(modifTitleProduct);
+        modifTitleProduct.innerHTML = `Page produit de l'ourson ${idSelectedProduct.name}`
         
         let container = document.querySelector('#container');
         container.insertAdjacentHTML("beforeend", SelectedItem); 

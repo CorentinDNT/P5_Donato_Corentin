@@ -44,7 +44,9 @@ header {
     color: #1877F2;
     box-shadow: 0 1px 5px black;
 }
-header h1{
+header a {
+    text-decoration: none;
+    color: #1877F2;
     font-family: 'Pacifico', cursive;
     margin: 0;
     padding-left: 30px;
