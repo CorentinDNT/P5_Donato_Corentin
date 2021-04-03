@@ -34,11 +34,15 @@ label {
     color: #FFF;
     font-size: 20px;
 }
+/*---------------*\
+        HEAD
+\*---------------*/
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     background-color: #FFF;
     height: 100%;
     width: 100%;
@@ -52,7 +56,7 @@ header h1 {
     font-family: 'Pacifico', cursive;
     margin: 0;
     width: 100%;
-    width: calc(100% - 485px);
+    width: 100%;
 }
 
 ul {
@@ -98,6 +102,20 @@ nav ul li a:hover{
 }
 a.active,a:hover{
     background: #000000d7;
+}
+/*---------------*\
+        FOOT
+\*---------------*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    height: 100%;
+    width: 100%;
+    color: black;
+    box-shadow: 0 1px 5px black;
 }
 .welcome-text {
     background-color: #FFF;
@@ -209,12 +227,52 @@ a.active,a:hover{
     background-color: #FFF;
 }
 .caption-product p, .caption-product label {
+    padding: 0 15px;
+}
+
+/*---------------*\
+       PANIER
+\*---------------*/
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 35px 0;
+}
+#container h2{
+    align-self: center;
+    text-decoration: underline #1877F2;
+    text-transform: uppercase;
+}
+#container-cart{
+    border: 3px solid black;
+
+    display: flex; 
+    flex-direction: column;
+
+    width: 75%;
+}
+
+.container-recap {
+    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+
     padding: 15px;
 }
 
-/* #color-product {
-    background-color: #1877F2;
-    color: white;
-} */
+.container-total-amount{
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
 
-//#1B9BFF
+    padding: 15px;
+}
+
+.conatiner-empty-cart{
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
