@@ -1,3 +1,5 @@
+body {margin: 0; padding: 0; box-sizing: border-box;}
+
 /*---------------*\
         BTN
 \*---------------*/
@@ -18,9 +20,6 @@
     border-radius: 10px 10px 0 0;
     font-size: 1.2rem;
     border: 1px solid black;
-}
-label {
-    display: none;
 }
 
 .body{
@@ -275,4 +274,72 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+/*---------------*\
+    FORM COMMAND
+\*---------------*/
+#container-commande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formulaire-commande {
+    border: 2px solid black;
+    background-color: blanchedalmond;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 75%;
+}
+#title-command{
+    text-align: center;
+}
+#command-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #1877F2;
+}
+.imput-command{
+    width: 99.9%;
+    border: none;
+}
+/*----------------*\
+CONFIRMATION COMMAND 
+\*----------------*/
+#main-confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px 0;
+
+}
+#carte-commande{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 75%;
+    height: 60vh;
+
+    background-color: blanchedalmond;
+}
+
+#spanShowId{
+    background-color: lightgreen;
+}
+
+#lastNameUP{
+    text-transform: uppercase;
+}
+
+#firstNameCapitalize{
+    text-transform: capitalize;
 }

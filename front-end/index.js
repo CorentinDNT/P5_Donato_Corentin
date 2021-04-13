@@ -2,16 +2,14 @@ const promise0 = fetch('http://localhost:3000/api/teddies');
 let main = document.querySelector('#main');
 let _id = [];
 
-console.log(_id);
 //promet que si la promesse est résolue, on a une reponse (response)
 promise0.then((response) => {
     console.log(response);
     //la response indique le code 200
     response.json().then((teddies) => {
-        console.log(response.json);
         for(let i = 0; i < teddies.length; i++) {
             const ours = teddies[i];
-            console.log(ours);
+            console.log(ours, "ourson numéro : ", + i+1);
     
             const norbertItem = `
             <a href="./pages/produit.html?id=${ours._id}" class="link-id">
