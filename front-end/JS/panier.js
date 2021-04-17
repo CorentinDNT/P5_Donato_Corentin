@@ -186,12 +186,28 @@ buttonSendForm.addEventListener("click", (e) => {
     return /^[A-Za-z]{3,20}$/.test(value);
   }
 
+  function regexMail(value) {
+    return /^[a-zA-Z0-9.-_]+[@]{1}[a-z-A-Z0-9.-_]+[.]{1}[a-z]{2,10}$/.test(value);
+  }
+
   function textAlert(value) {
     return (
       value +
       " : Chiffre et symboles ne sont pas accéptés. \n Merci de ne pas dépasser 20 caractères"
     );
   }
+
+  function mailControle() {
+    //Controle caractériel mail
+    const leMail = contact.email;
+    if (regexMail(leMail)) {
+      return true;
+    } else {
+      alert("Veuillez saisir une adresse email valide");
+      return false;
+    }
+  }
+
   function nomControle() {
     //Controle caractériel nom
     const leNom = contact.lastName;
@@ -232,7 +248,7 @@ buttonSendForm.addEventListener("click", (e) => {
   console.log(toSend);
 
   let formPost = document.querySelector("command-form");
-  if (nomControle() && prenomControle() && villeControle()) {
+  if (nomControle() && prenomControle() && villeControle() && mailControle()) {
     //Mettre "contact" dans le localStorage
     localStorage.setItem("contact", JSON.stringify(contact));
     fetch("http://localhost:3000/api/teddies/order", {

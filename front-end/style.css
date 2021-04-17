@@ -343,3 +343,52 @@ CONFIRMATION COMMAND
 #firstNameCapitalize{
     text-transform: capitalize;
 }
+
+ /*--------------------------------------------------------------------------*\
+|---------------------------------MEDIA QUERRIES------------------------------ |
+ \*--------------------------------------------------------------------------*/
+
+@media screen and (max-width: 770px) {
+    .main {
+        justify-content: space-around;
+        margin: 0;
+    }
+    .link-id {
+        width: 90%;
+    }
+    .figure {
+        flex-direction: column;
+    }
+    .figure img{
+        width: 100%;
+        height: 65%;
+        border-radius: 15px 15px 0 0;
+    }
+    .caption {
+        width: 100%;
+        height: 35%;
+        border-radius: 0 0 15px 15px;
+    }
+    .welcome-text {
+        width: 80%;
+    }
+
+    /*----------------*\
+       CONTAINDER PAGE 
+    \*----------------*/
+
+    .figure-product {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 99%;
+        height: 100%;
+    }
+    .figure-product img {
+        height: 30%;
+        width: 100%;
+    }
+    .caption-product {
+        height: 30%;
+        width: 100%;
+    }
+  }
